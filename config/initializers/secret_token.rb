@@ -1,0 +1,1 @@
+HoneyDo::Application.config.secret_key_base = '3115b20e06e5c62ed986cb63ea4d86efcb4f5767fcd4cba78bb25f19ff6fd5e9e668da38e62e5dda6249aa8952eab6529fc4f733c4e4039f6b3c45ffe4c80e5c'
