@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  
-  root to: "static_pages#root"
+
+  #root to: "static_pages#root"
 
   resources :boards do
     resources :lists
@@ -13,11 +13,13 @@ Rails.application.routes.draw do
     end
 
     resources :lists, only: [:index, :show, :create, :update, :destroy] do
-      resources :cards, only: [:create, :update, :destroy] 
+      resources :cards, only: [:create, :update, :destroy]
     end
 
-    resources :cards, only: [:create, :update, :destroy] do
+    resources :cards, only: [:index, :show, :create, :update, :destroy] do
        resources :items, only: [:create, :update, :destroy]
     end
-  end  
+
+    resources :items, only: [:index, :show, :create, :update, :destroy]
+  end
 end

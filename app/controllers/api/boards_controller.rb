@@ -2,12 +2,12 @@ class Api::BoardsController < ApplicationController
 
   def index
     @boards = Board.all
-    render json: @boards
+
   end
 
   def show
     @board = Board.find(params[:id])
-    render json: @board
+  
   end
 
   def edit
@@ -44,7 +44,7 @@ class Api::BoardsController < ApplicationController
     @board.destroy
   end
 
-  private 
+  private
 
   def board_params
     params.require(:board).permit(:title, :created_by);

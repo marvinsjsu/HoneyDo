@@ -21,7 +21,7 @@ HoneyDo.Collections.Boards = Backbone.Collection.extend({
 				}
 			});
 		}
-		return shoe;
+		return board;
 	}
 });
 
